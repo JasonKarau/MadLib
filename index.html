@@ -1,0 +1,92 @@
+<!--
+making MadLIBs
+how do we show/hide? display. visibility
+reference the core concept topics to assist you
+22 innerHTML
+25 events
+26 removals
+29 entering Text
+23 change CSS
+className=""
+display vs visibility
+28 enter key
+focus() blur()
+cursor pointer
+preventing empty inputs
+reseting the form to try again
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Master MadLib</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="div1" id="inputPanel">
+        <h3 class="head1">A few questions for you! Lets do a MADLIB!</h3>
+        <p class="p1">A first name:
+            <input id="firstName" type="text" placeholder="first name">
+        </p>
+        <p class="p1">Your favorite color:
+            <input id="favColor" type="text" placeholder="favorite color">
+        </p>
+        <p class="p1">Place:
+            <input id="place" type="text" placeholder="place">
+        </p>
+        <button class="button1" id="submit">Submit your answers</button>
+        <p class="p1" id="warning">Please answer all questions.</p>
+    </div>
+
+    <div class="div2" id="outputPanel">
+        <p class="p2">Your story!!!!!!</p>
+        <p class="p2txt"id="theStory">junk</p>
+        <button class="button2" id="again">Again?</button>
+    </div>
+
+    <script>
+        const inputPanel = document.querySelector("#inputPanel");
+        const outputPanel = document.querySelector("#outputPanel");
+        const warning = document.querySelector("#warning");
+
+        const submit = document.querySelector("#submit");
+        submit.addEventListener("click", writeStory, false);
+
+        const again = document.querySelector("#again");
+        again.addEventListener("click", resetPage, false);
+
+        document.querySelector('#firstName').focus();
+
+        const firstName = document.querySelector('#firstName');
+        const favColor = document.querySelector("#favColor");
+        const place = document.querySelector('#place');
+        const theStory = document.querySelector("#theStory");
+
+        window.addEventListener("keydown", keydownHandler, false);
+
+        function keydownHandler(event) {
+            console.log("Enter key pressed");
+
+        }
+
+        function checkComplete() {
+            //verify the user filled in the form
+
+        }
+
+        function writeStory() {
+            //grab the input values to write the story
+
+        }
+
+        function resetPage() {
+            //put stuff here to reset the page so the user can try again
+
+        }
+    </script>
+</body>
+
+</html>
