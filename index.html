@@ -73,13 +73,14 @@ reseting the form to try again
 
     <div class="div2" id="outputPanel">
         <p class="p2">Your story!!!!!!</p>
-        <p class="p2txt"id="theStory">"Sir, can I please get a refund? My name is (firstname) and I called yesterday about my (fav color) dyson vaccum. I never got a call back! Whats the deal?" </p>
+        <p class="p2txt"id="theStory">junk</p>
+        <!-- <p class="p2txt"id="theStory">"Sir, can I please get a refund? My name is (firstname) and I called yesterday about my (fav color) dyson vaccum. I never got a call back! Whats the deal?" </p>
         <p class="p2txt"id="theStory">(firstname) was at (retail store), angered about his non working vaccum. He recently spilled (drink) on his carpet and the vaccum didnt clean it. He came all the way from (place) to get a refund!!!</p>
         <p class="p2txt"id="theStory">The employee at the front desk was confused why (firstname) was complaining. "Im sorry sir, when you bought the vaccum it was not put under a protection plan and its already past 30 days of purchase. Therefore, um, we cant get you a refund"</p>
         <p class="p2txt"id="theStory">"What the (expletive)! I came all the way from (place)! And now my best friend (bff's name) is waiting for me at LE LECHE for dinner with his mom (moms name). I'm gonna be late!" (firstname) said</p>
         <p class="p2txt"id="theStory">The employee already had a bad day and he was about to explode with rage. At this point... He released all of his anger on (firstname)</p>
         <p class="p2txt"id="theStory">"Listen, your (brand) shoes look like garbage! I hope when you get dinner all of (food) you eat gives you food poisoning. Also, while your at it take the (utensil) outta ur back end"</p>
-        <p class="p2txt"id="theStory">The employee was later fired and sent back to (elementary school), his old elementary school to work as a janitor. THE END.</p>
+        <p class="p2txt"id="theStory">The employee was later fired and sent back to (elementary school), his old elementary school to work as a janitor. THE END.</p> -->
         <button class="button2" id="again">Again?</button>
     </div>
 
@@ -115,7 +116,10 @@ reseting the form to try again
 
         function writeStory() {
             //grab the input values to write the story
-
+            let story = "My name is "
+            story += firstName.value
+            story += ". Sir, can I please get a refund? I called yesterday about my " + favColor.value + " I never got a call back! Whats the deal?"
+            theStory.innerHTML = story
         }
 
         function resetPage() {
