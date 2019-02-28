@@ -26,7 +26,7 @@ reseting the form to try again
 </head>
 
 <body>
-    <div class="div1" id="inputPanel">
+    <div class="div1 displayBlock" id="inputPanel">
         <h3 class="head1">A few questions for you! Lets do a MADLIB!</h3>
         <p class="p1">A first name:
             <input id="firstName" type="text" placeholder="first name">
@@ -71,7 +71,7 @@ reseting the form to try again
         <p class="p1" id="warning">Please answer all questions.</p>
     </div>
 
-    <div class="div2" id="outputPanel">
+    <div id="outputPanel" class="displayNone div2">
         <p class="p2">Your story!!!!!!</p>
         <p class="p2txt"id="theStory">junk</p>
         <!-- <p class="p2txt"id="theStory">"Sir, can I please get a refund? My name is (firstname) and I called yesterday about my (fav color) dyson vaccum. I never got a call back! Whats the deal?" </p>
@@ -104,13 +104,13 @@ reseting the form to try again
 
         window.addEventListener("keydown", keydownHandler, false);
 
-        inputPanel.className = "displayBlock"
-        outputPanel.className = "displayNone"
-        warning.className = "displayNone"
+        // inputPanel = "displayBlock"
+        // outputPanel.classlist.add("displayNone")
+        // warning.className = "displayNone"
 
         function keydownHandler(event) {
-          if (event.keyCode === 13)
-            console.log("Enter key pressed");
+          if (event.keyCode === 13) {
+            console.log(inputPanel);
             writeStory()
            }
         }
@@ -125,13 +125,15 @@ reseting the form to try again
             story += firstName.value
             story += ". Sir, can I please get a refund? I called yesterday about my " + favColor.value + " dyson vaccum. I never got a call back! Whats the deal? "
             story += firstName.value
-            story += " was at " + store.value + " angered about his non working vaccum. He recently spilled " + drink.value + " on his carpet, and the vaccum didnt clean it. He came all the way from " + place.value + " to get a refund!!! The employee at the front desk was confused why " + firstName.value + " was complaining. Im sorry sir, when you bought the vaccum it was not put under a protection plan and its already past 30 days of purchase. Therefore, um, we cant get you a refund. What the " + curse.value + "! I came all the way from " + place.value + "! And now my best friend " + bfname.value + " is waiting for me at LE LECHE for dinner with his mom " + momname.value + ". I'm gonna be late! " + firstName.value + " said. The employee already had a bad day and he was about to explode with rage. At this point... He released all of his anger on " + firstName.value + " Listen, your " + brand.value + " shoes look like garbage! I hope when you get dinner all of the " + food.value + " you eat gives you food poisoning. Also, while your at it take the " + utensil.value + " outta ur back end. The employee was later fired and sent back to " + school.value + ", his old elementary school to work as a janitor. THE END."
+            story += " was at " + store.value + " angered about his non working vaccum. He recently spilled " + drink.value + " on his carpet, and the vaccum didnt clean it. He came all the way from " + place.value + " to get a refund!!! The employee at the front desk was confused why " + firstName.value + " was complaining. Im sorry sir, when you bought the vaccum it was not put under a protection plan and its already past 30 days of purchase. Therefore, um, we cant get you a refund. What the " + curse.value + "! I came all the way from " + place.value + "! <br><br>And now my best friend " + bfname.value + " is waiting for me at LE LECHE for dinner with his mom " + momname.value + ". I'm gonna be late! " + firstName.value + " said. The employee already had a bad day and he was about to explode with rage. At this point... He released all of his anger on " + firstName.value + " Listen, your " + brand.value + " shoes look like garbage! I hope when you get dinner all of the " + food.value + " you eat gives you food poisoning. Also, while your at it take the " + utensil.value + " outta ur back end. The employee was later fired and sent back to " + school.value + ", his old elementary school to work as a janitor. THE END."
 
             theStory.innerHTML = story
 
-            inputPanel.className = "displayNone"
-            outputPanel.className = "displayBlock"
-            warning.className = "displayNone"
+            inputPanel.classList.add("displayNone")
+            inputPanel.classList.remove("displayBlock")
+            outputPanel.classList.remove("displayNone")
+            outputPanel.classList.add("displayBlock")
+            warning.classList.add("displayNone")
         }
 
         function resetPage() {
