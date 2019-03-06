@@ -101,9 +101,17 @@ reseting the form to try again
         const place = document.querySelector('#place');
         const theStory = document.querySelector("#theStory");
         window.addEventListener("keydown", keydownHandler, false);
+<<<<<<< HEAD
         // inputPanel = "displayBlock"
         // outputPanel.classlist.add("displayNone")
         // warning.className = "displayNone"
+=======
+
+        // inputPanel = "displayBlock"
+        // outputPanel.classlist.add("displayNone")
+        // warning.className = "displayNone"
+
+>>>>>>> 5c89b49e5739112b880582f5a197382300000e49
         function keydownHandler(event) {
           if (event.keyCode === 13) {
             console.log(inputPanel);
@@ -121,7 +129,12 @@ reseting the form to try again
             story += firstName.value
             story += ". Sir, can I please get a refund? I called yesterday about my " + favColor.value + " dyson vaccum. I never got a call back! Whats the deal? <br><br>"
             story += firstName.value
+<<<<<<< HEAD
             story += " was at " + store.value + " angered about his non working vaccum. He recently spilled " + drink.value + " on his carpet, and the vaccum didnt clean it. He came all the way from " + place.value + " to get a refund!!! The employee at the front desk was confused why " + firstName.value + " was complaining. <br><br> Im sorry sir, when you bought the vaccum it was not put under a protection plan and its already past 30 days of purchase. Therefore, um, we cant get you a refund. <br><br> What the " + curse.value + "! I came all the way from " + place.value + "! And now my best friend " + bfname.value + " is waiting for me at LE LECHE for dinner with his mom " + momname.value + ". I'm gonna be late! " + firstName.value + " said. The employee already had a bad day and he was about to explode with rage. At this point... He released all of his anger on " + firstName.value + ".<br><br> Listen, your " + brand.value + " shoes look like garbage! I hope when you get dinner all of the " + food.value + " you eat gives you food poisoning. Also, while your at it take the " + utensil.value + " outta ur back end. <br><br> The employee was later fired and sent back to " + school.value + ", his old elementary school to work as a janitor. THE END."
+=======
+            story += " was at " + store.value + " angered about his non working vaccum. He recently spilled " + drink.value + " on his carpet, and the vaccum didnt clean it. He came all the way from " + place.value + " to get a refund!!! The employee at the front desk was confused why " + firstName.value + " was complaining. Im sorry sir, when you bought the vaccum it was not put under a protection plan and its already past 30 days of purchase. Therefore, um, we cant get you a refund. What the " + curse.value + "! I came all the way from " + place.value + "! <br><br>And now my best friend " + bfname.value + " is waiting for me at LE LECHE for dinner with his mom " + momname.value + ". I'm gonna be late! " + firstName.value + " said. The employee already had a bad day and he was about to explode with rage. At this point... He released all of his anger on " + firstName.value + " Listen, your " + brand.value + " shoes look like garbage! I hope when you get dinner all of the " + food.value + " you eat gives you food poisoning. Also, while your at it take the " + utensil.value + " outta ur back end. The employee was later fired and sent back to " + school.value + ", his old elementary school to work as a janitor. THE END."
+
+>>>>>>> 5c89b49e5739112b880582f5a197382300000e49
             theStory.innerHTML = story
 
             inputPanel.classList.add("displayNone")
